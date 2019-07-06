@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "global": {
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarTextStyle": "black",
+      "navigationBarBackgroundColor": "#ffffff"
+    }
+  },
+  "tabBar": {
+    "selectedColor": "#1afa29",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/fenlei.png",
+        "selectedIconPath": "img/fenlei_active.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "img/search.png",
+        "selectedIconPath": "img/search_active.png",
+        "text": "查询"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/kaoshi.png",
+        "selectedIconPath": "img/kaoshi_active.png",
+        "text": "答题"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
