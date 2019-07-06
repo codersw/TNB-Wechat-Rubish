@@ -1,4 +1,13 @@
 <!--index.wxml-->
+
+<view class='page_row'> 
+  <view class="search" bindtap="toSearchPage">  
+    <view class="df search_arr">  
+      <icon class="searchcion" size='20' type='search'></icon>  
+      <input class="" disabled placeholder="请输入关键字" value="{{searchValue}}"/>  
+    </view>  
+  </view>  
+</view>    
 <!--主盒子-->
 <view class="containers">
   <!--左侧栏-->
@@ -9,7 +18,7 @@
   </view>
   <!--右侧栏-->
   <view class="nav_right">
-    <view style="width:100%;height:outo;text-align:center;border-radius:5px;background:#C2C2C2">
+    <view style="width:100%;height:outo;text-align:center;border-radius:5px;background:#FFFAF0">
       <image src="{{cateItems[curIndex].imgUrl}}" style="width: 35%;height: 90px;border-radius:5px;"/>
       <view>
 
@@ -19,14 +28,25 @@
     <view wx:if="{{cateItems[curIndex].ishaveChild}}">
       <block wx:for="{{cateItems[curIndex].children}}" wx:key="">
       <!--界面跳转 -->
-      <navigator url="">
-        <view class="nav_right_items" style="text-align:left;{{index % 2 == 0 ? 'background: #f5f5f5;' : '' }}">
-            <text style="padding:10px;">{{item.n}}</text>
+        <view class="nav_right_items" style="text-align:left;{{index % 2 == 0 ? 'background: #f5f5f5;' : '' }}" data-name="{{item.n}}" bindtap="toggleDialog">
+            <text style="padding:10px;font-size:14px;">{{item.n}}</text>
         </view>
-      </navigator>
       </block>
     </view>
     <!--如果无数据，则显示数据-->
     <view class="nodata_text" wx:else>该分类暂无数据</view>
+  </view>
+</view>
+<view wx:if="{{scrollTop>minscreenHeight}}" class="goTop" bindtap="goTop">
+   <text>返回\n顶部</text>  
+</view>
+
+
+<view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+  <view class="zan-dialog__container" style="{{background}};color:#fff;">
+    <view style="font-size: 18px;text-align: center;display: block;text-aglin: center;margin-top: 10px;width: 100%;height: 30px;overflow: hidden;">{{name}}</view>
+    <view style="font-size: 13px;text-align: center;display: block;text-aglin: center;margin-top: 15px;width: 100%;height: 15px;">属于</view>
+    <image src="{{cateItems[curIndex].imgUrl}}" class="img"/>
   </view>
 </view>

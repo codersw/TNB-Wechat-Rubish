@@ -1,0 +1,31 @@
+<view class='page_row'> 
+  <view class="search" bindtap="toSearchPage">  
+    <view class="df search_arr">  
+      <icon class="searchcion" size='20' type='search'></icon>  
+      <input class="" bindinput='search'   placeholder="请输入关键字" value="{{searchValue}}" focus="{{inputShowed}}"/>  
+    </view>  
+  </view>  
+</view> 
+
+<!--主盒子-->
+<!--主盒子-->
+<view class="containers">
+  <!--右侧栏-->
+  <view class="nav_right">
+  
+    <!--如果有数据，才遍历项-->
+    <view wx:if="{{cateItems.length > 0}}">
+      <block wx:for="{{cateItems}}" wx:key="">
+      <!--界面跳转 -->
+        <view class="nav_right_items" style="text-align:left;{{index % 2 == 0 ? 'background: #f5f5f5;' : '' }}" data-name="{{item.n}}" bindtap="toggleDialog">
+          <text style="padding:10px;font-size:14px;" wx:if="{{item.c == '1'}}">{{item.n}}[湿垃圾]</text>
+          <text style="padding:10px;font-size:14px;" wx:if="{{item.c == '2'}}">{{item.n}}[干垃圾]</text>
+          <text style="padding:10px;font-size:14px;" wx:if="{{item.c == '3'}}">{{item.n}}[可回收物]</text>
+          <text style="padding:10px;font-size:14px;" wx:if="{{item.c == '4'}}">{{item.n}}[有害垃圾]</text>
+        </view>
+      </block>
+    </view>
+    <!--如果无数据，则显示数据-->
+    <view class="nodata_text" wx:else>暂无数据</view>
+  </view>
+</view>
