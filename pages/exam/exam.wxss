@@ -1,0 +1,175 @@
+/* pages/exam/exam.wxss */
+page {
+  line-height: 1.6;
+  font-family: -apple-system-font,Helvetica Neue,sans-serif;
+  background: #f3f4f5;
+  width: 100%;
+  height: 100%;
+}
+page {
+  --red: #e54d42;
+  --orange: #f37b1d;
+  --yellow: #fbbd08;
+  --olive: #8dc63f;
+  --green: #39b54a;
+  --cyan: #1cbbb4;
+  --blue: #0081ff;
+  --purple: #6739b6;
+  --mauve: #9c26b0;
+  --pink: #e03997;
+  --brown: #a5673f;
+  --grey: #8799a3;
+  --black: #333333;
+  --darkGray: #666666;
+  --gray: #aaaaaa;
+  --ghostWhite: #f1f1f1;
+  --white: #ffffff;
+  --redLight: #fadbd9;
+  --orangeLight: #fde6d2;
+  --yellowLight: #fef2ce;
+  --oliveLight: #e8f4d9;
+  --greenLight: #d7f0db;
+  --cyanLight: #d2f1f0;
+  --blueLight: #cce6ff;
+  --purpleLight: #e1d7f0;
+  --mauveLight: #ebd4ef;
+  --pinkLight: #f9d7ea;
+  --brownLight: #ede1d9;
+  --greyLight: #e7ebed;
+  --gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
+  --gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
+  --gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
+  --gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
+  --gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
+  --gradualBlue: linear-gradient(45deg, #0081ff, #1cbbb4);
+  --ShadowSize: 6rpx 6rpx 8rpx;
+  --redShadow: rgba(204, 69, 59, 0.2);
+  --orangeShadow: rgba(217, 109, 26, 0.2);
+  --yellowShadow: rgba(224, 170, 7, 0.2);
+  --oliveShadow: rgba(124, 173, 55, 0.2);
+  --greenShadow: rgba(48, 156, 63, 0.2);
+  --cyanShadow: rgba(28, 187, 180, 0.2);
+  --blueShadow: rgba(0, 102, 204, 0.2);
+  --purpleShadow: rgba(88, 48, 156, 0.2);
+  --mauveShadow: rgba(133, 33, 150, 0.2);
+  --pinkShadow: rgba(199, 50, 134, 0.2);
+  --brownShadow: rgba(140, 88, 53, 0.2);
+  --greyShadow: rgba(114, 130, 138, 0.2);
+  --grayShadow: rgba(114, 130, 138, 0.2);
+  --blackShadow: rgba(26, 26, 26, 0.2);
+  background-color: var(--ghostWhite);
+  font-size: 28rpx;
+  color: var(--black);
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+view, scroll-view, swiper, button, input, textarea, label, navigator, image {
+  box-sizing: border-box;
+}
+view {
+  display: block;
+}
+scroll-view {
+  display: block;
+  width: 100%;
+}
+.response {
+  width: 100%;
+}
+image {
+  max-width: 100%;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+.bg-white {
+  background-color: var(--white);
+  color: var(--darkGray);
+}
+.cu-bar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-height: 100rpx;
+  justify-content: space-between;
+}
+.cu-bar .action:first-child {
+  margin-left: 30rpx;
+  font-size: 30rpx;
+}
+.cu-bar .action {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  max-width: 100%;
+}
+.text-blue, .line-blue, .lines-blue {
+  color:  #0081ff;
+}
+.cu-bar .action:last-child {
+  margin-right: 30rpx;
+}
+.cu-btn {
+  position: relative;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  height: 64rpx;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  margin-left: initial;
+  transform: translate(0rpx, 0rpx);
+  margin-right: initial;
+}
+.text-center {
+  text-align: center;
+}
+.margin-top {
+  margin-top: 30rpx;
+}
+.bg-white {
+  background-color: var(--white);
+  color: var(--darkGray);
+}
+.padding-lr {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.padding {
+  padding: 30rpx;
+}
+.solid, .solid-top, .solid-right, .solid-bottom, .solid-left, .solids, .solids-top, .solids-right, .solids-bottom, .solids-left, .dashed, .dashed-top, .dashed-right, .dashed-bottom, .dashed-left {
+  position: relative;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-sm {
+  font-size: 24rpx;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-sm {
+  font-size: 24rpx;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.flex {
+  display: flex;
+}
+.text-brown, .line-brown, .lines-brown {
+  color: var(--brown);
+}
+navigator {
+  height: auto;
+  width: auto;
+  display: block;
+}

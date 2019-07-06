@@ -2,6 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/search/search",
+    "pages/exam/exam",
+    "pages/exam/paper/paper",
+    "pages/exam/result/result",
     "pages/logs/logs"
   ],
   "window": {
@@ -33,7 +36,7 @@
         "text": "查询"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/exam/exam",
         "iconPath": "img/kaoshi.png",
         "selectedIconPath": "img/kaoshi_active.png",
         "text": "答题"
