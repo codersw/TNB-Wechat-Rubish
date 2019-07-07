@@ -6,18 +6,50 @@
     </view>  
   </view>  
 </view> 
-
-<!--主盒子-->
 <!--主盒子-->
 <view class="containers">
+  <view hidden="{{hiddenDefaut}}">
+    <view style="text-align:center;margin:18rpx 0 0 0;color:rgb(229, 52, 34);font-weight:bold;">
+      <text>如果未查到匹配字段\n</text>
+      <text>以下方法为您推荐</text>
+    </view>
+    <view class="layout">
+      <view class="layout00">
+        <view class="layout1">
+          <image src="../../img/shilaji.png" style="width:300rpx;height:300rpx;"></image>
+          <text style="margin:20rpx 0 0 0">猪吃的</text>
+        </view>
+        <view class="layout1">
+          <image src="../../img/ganlaji.png" style="width:300rpx;height:300rpx;"></image>
+          <text style="margin:20rpx 0 0 0">猪不吃的</text>
+        </view>
+      </view>
+      <view class="layout00">
+        <view class="layout1">
+          <image src="../../img/kehuishouwulaji.png" style="width:300rpx;height:300rpx;"></image>
+          <text style="margin:20rpx 0 0 0">卖了换猪</text>
+        </view>
+        <view class="layout1">
+          <image src="../../img/youhailaji.png" style="width:300rpx;height:300rpx;"></image>
+          <text style="margin:20rpx 0 0 0">猪吃了会死</text>
+        </view>
+      </view>
+    </view>
+    <view class="layout2">
+      <text style="font-size:31rpx;margin:0 0 0 70rpx;">鼓励将<text style="color:#000066;font-weight:bold;font-size:34rpx;">可回收物</text>卖入废品回收系统，</text>
+      <text style="font-size:31rpx;">或交投至两网融合服务点，或投放至可回收</text>
+      <text style="font-size:31rpx;">物收集容器；严禁将<text style="color:rgb(229, 52, 34);font-weight:bold;font-size:34rpx;">有害垃圾</text>投放到其他的</text>
+      <text style="font-size:31rpx;">生活垃圾收集容器；日常家庭生活垃圾要做</text>
+      <text style="font-size:31rpx;">到<text style="color:rgb(44, 43, 41);font-weight:bold;font-size:34rpx;">干</text>、<text style="color:rgb(100, 64, 50);font-weight:bold;font-size:34rpx;">湿</text>垃圾两分开</text>
+  </view>
+</view>
   <!--右侧栏-->
-  <view class="nav_right">
-  
+  <view class="nav_right" hidden="{{hiddenResult}}">
     <!--如果有数据，才遍历项-->
     <view wx:if="{{cateItems.length > 0}}">
       <block wx:for="{{cateItems}}" wx:key="">
       <!--界面跳转 -->
-        <view class="nav_right_items" style="text-align:left;{{index % 2 == 0 ? 'background: #f5f5f5;' : '' }}" data-name="{{item.n}}" bindtap="toggleDialog">
+        <view class="nav_right_items" style="text-align:left;color:black;{{index % 2 == 0 ? 'background: #f5f5f5;' : '' }}" data-name="{{item.n}}" bindtap="toggleDialog">
           <text style="padding:10px;font-size:14px;" wx:if="{{item.c == '1'}}">{{item.n}}[湿垃圾]</text>
           <text style="padding:10px;font-size:14px;" wx:if="{{item.c == '2'}}">{{item.n}}[干垃圾]</text>
           <text style="padding:10px;font-size:14px;" wx:if="{{item.c == '3'}}">{{item.n}}[可回收物]</text>
@@ -25,7 +57,5 @@
         </view>
       </block>
     </view>
-    <!--如果无数据，则显示数据-->
-    <view class="nodata_text" wx:else>暂无数据</view>
   </view>
 </view>

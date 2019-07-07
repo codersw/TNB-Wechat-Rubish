@@ -4,7 +4,9 @@ const rubishData = require('../../rubish_data.js')
 Page({
   data: {
     cateItems: [],
-    inputShowed: false
+    inputShowed: false,
+    hiddenDefaut:false,
+    hiddenResult:true
   },
   onLoad: function () {
     this.setData({
@@ -23,7 +25,14 @@ Page({
       let alist = list.slice(0, 50);
       alist = utils.uniqueArray(alist,'n');
       this.setData({
-        cateItems: alist
+        cateItems: alist,
+        hiddenDefaut: true,
+        hiddenResult: false
+      });
+    }else {
+      this.setData({
+        hiddenDefaut: false,
+        hiddenResult: true
       });
     }
   }

@@ -49,7 +49,11 @@ Page({
       background: "background:"+this.data.cateItems[index].color
     })
   },
-  onLoad: function () {
+  onLoad: function (e) {
+    console.log(e.id);
+    if (e.id == 'share'){
+      
+    }
     this.bindData();
   },
   toggleDialog(e) {

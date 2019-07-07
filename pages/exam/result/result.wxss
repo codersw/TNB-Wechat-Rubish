@@ -75,3 +75,50 @@ page {
   height: 20px;  
   text-align: center;  
 }  
+.flex {
+  display: flex;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.padding {
+  padding: 30rpx;
+}
+.solid, .solid-top, .solid-right, .solid-bottom, .solid-left, .solids, .solids-top, .solids-right, .solids-bottom, .solids-left, .dashed, .dashed-top, .dashed-right, .dashed-bottom, .dashed-left {
+  position: relative;
+}
+view, scroll-view, swiper, button, input, textarea, label, navigator, image {
+  box-sizing: border-box;
+}
+.cu-btn.button-hover {
+  transform: translate(1rpx, 1rpx);
+}
+.text-brown, .line-brown, .lines-brown {
+  color: #a5673f;
+}
+.cu-btn[class*="line"] {
+  background-color: transparent;
+}
+.cu-btn {
+  position: relative;
+  border: 0rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  height: 64rpx;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  margin-left: initial;
+  transform: translate(0rpx, 0rpx);
+  margin-right: initial;
+}
+navigator {
+  height: auto;
+  width: auto;
+  display: block
+}
