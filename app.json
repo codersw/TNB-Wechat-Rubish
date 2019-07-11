@@ -30,12 +30,6 @@
         "text": "分类"
       },
       {
-        "pagePath": "pages/search/search",
-        "iconPath": "img/search.png",
-        "selectedIconPath": "img/search_active.png",
-        "text": "查询"
-      },
-      {
         "pagePath": "pages/exam/exam",
         "iconPath": "img/kaoshi.png",
         "selectedIconPath": "img/kaoshi_active.png",

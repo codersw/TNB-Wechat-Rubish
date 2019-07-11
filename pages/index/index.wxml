@@ -26,9 +26,9 @@
     </view>
     <!--如果有数据，才遍历项-->
     <view wx:if="{{cateItems[curIndex].ishaveChild}}">
-      <block wx:for="{{cateItems[curIndex].children}}" wx:key="">
+      <block wx:for="{{cateItems[curIndex].children}}" wx:key="" >
       <!--界面跳转 -->
-        <view class="nav_right_items" style="text-align:left;{{index % 2 == 0 ? 'background: #f5f5f5;' : '' }}" data-name="{{item.n}}" bindtap="toggleDialog">
+        <view class="nav_right_items" style="text-align:left;{{index % 2 == 0 ? 'background: #f5f5f5;' : '' }}" data-name="{{item.n}}"  bindtap="toggleDialog">
             <text style="padding:10px;font-size:14px;">{{item.n}}</text>
         </view>
       </block>

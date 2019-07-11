@@ -50,16 +50,19 @@ Page({
     })
   },
   onLoad: function (e) {
-    console.log(e.id);
     if (e.id == 'share'){
-      
+      wx.switchTab({
+        url: '../exam/exam'
+      });
     }
     this.bindData();
   },
   toggleDialog(e) {
+    let name = e.currentTarget.dataset['name'];
+    console.log(name);
     this.setData({
       showDialog: !this.data.showDialog,
-      name: e.target.dataset.name
+      name: name
     });
   },  
   bindData() {
@@ -105,9 +108,8 @@ Page({
     });
   },
   toSearchPage(){
-
-    wx.switchTab({
-      url: '../search/search'
+    wx.navigateTo({
+      url: '../search/search',
     });
   }
 })
